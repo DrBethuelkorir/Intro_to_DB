@@ -1,4 +1,3 @@
-
 CREATE table Authors(
     author_id INT PRIMARY key,
     author_name VARCHAR(215)
@@ -11,6 +10,8 @@ CREATE TABLE Books(
     author_id INT,
     price DOUBLE,
     pulication_date DATE
+    Foreign Key (author_id) REFERENCES Authors(author_id)
+
 );
 
 CREATE Table Customers(
@@ -29,5 +30,7 @@ CREATE TABLE Order_Details(
     orderdetailid int PRIMARY KEY,
     order_id INT,
     book_id INT,
-    quantity DOUBLE
+    quantity DOUBLE,
+    FOREIGN KEY (order_id) REFERENCES Orders(order_id),
+    FOREIGN KEY (book_id) REFERENCES Books(book_id)
 );
