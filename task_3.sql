@@ -1,1 +1,1 @@
-show tables from  alx_book_store;
+show tables;
