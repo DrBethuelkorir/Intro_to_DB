@@ -2,7 +2,7 @@ CREATE DATABASE IF NOT EXISTS alx_book_store;
 
 CREATE table Authors(
     author_id INT PRIMARY key,
-    Author_name VARCHAR(215)
+    author_name VARCHAR(215)
 
 );
 
